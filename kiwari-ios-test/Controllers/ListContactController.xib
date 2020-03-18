@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListContactController" customModule="kiwari_ios_test" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="O6c-cr-Npf" id="dKL-xY-fMS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZH-uO-jTM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clu-s4-qIv">
+                            <rect key="frame" x="170" y="5" width="74.5" height="45.5"/>
+                            <string key="text">k i w a r i
+(๑⚈ ․̫ ⚈๑)</string>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="16"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7d-hn-uyp">
+                            <rect key="frame" x="358.5" y="10" width="45.5" height="45.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="N7d-hn-uyp" secondAttribute="height" multiplier="1:1" id="73t-SP-wFM"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="logout"/>
+                            <connections>
+                                <action selector="logoutOnClick:" destination="-1" eventType="touchUpInside" id="RLF-pp-0ny"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="0lQ-e7-DXs"/>
+                        <constraint firstAttribute="trailing" secondItem="N7d-hn-uyp" secondAttribute="trailing" constant="10" id="Hjw-Mz-arC"/>
+                        <constraint firstItem="N7d-hn-uyp" firstAttribute="height" secondItem="rZH-uO-jTM" secondAttribute="height" multiplier="0.7" id="KTo-CF-dOp"/>
+                        <constraint firstItem="N7d-hn-uyp" firstAttribute="centerY" secondItem="rZH-uO-jTM" secondAttribute="centerY" id="nYd-4e-gIm"/>
+                        <constraint firstItem="clu-s4-qIv" firstAttribute="centerX" secondItem="rZH-uO-jTM" secondAttribute="centerX" id="u9c-5m-Ed9"/>
+                        <constraint firstItem="clu-s4-qIv" firstAttribute="top" secondItem="rZH-uO-jTM" secondAttribute="top" constant="5" id="vtG-kj-1ph"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O6c-cr-Npf">
+                    <rect key="frame" x="0.0" y="109" width="414" height="753"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rZH-uO-jTM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Eur-TP-Pyl"/>
+                <constraint firstItem="O6c-cr-Npf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L8l-jg-S2T"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rZH-uO-jTM" secondAttribute="trailing" id="LPn-zT-938"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="O6c-cr-Npf" secondAttribute="trailing" id="Vpf-fL-bNm"/>
+                <constraint firstItem="O6c-cr-Npf" firstAttribute="top" secondItem="rZH-uO-jTM" secondAttribute="bottom" id="eKd-hA-0pQ"/>
+                <constraint firstItem="rZH-uO-jTM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ee4-cf-Pm0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="O6c-cr-Npf" secondAttribute="bottom" id="qmF-ln-5Iw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logout" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

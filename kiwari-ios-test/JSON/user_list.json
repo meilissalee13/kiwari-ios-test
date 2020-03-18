@@ -1,0 +1,26 @@
+{
+  "status": 200,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "email": "jarjit@mail.com",
+      "name": "Jarjit Singh",
+      "avatar": "https://api.adorable.io/avatars/160/jarjit@mail.com.png",
+      "password": "123456"
+    },
+    {
+      "email": "ismail@mail.com",
+      "name": "Ismail bin Mail",
+      "avatar": "https://api.adorable.io/avatars/160/ismail@mail.com.png",
+      "password": "123456"
+    },
+    {
+      "email": "mei@mail.com",
+      "name": "Mei",
+      "avatar": "",
+      "password": "123456"
+    }
+  ],
+  "params": []
+}

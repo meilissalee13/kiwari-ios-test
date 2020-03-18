@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9202907824223DB70029A209 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202907724223DB70029A209 /* Message.swift */; };
+		9202907A24224DDF0029A209 /* ChatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9202907924224DDF0029A209 /* ChatController.xib */; };
+		9202907C24224DE60029A209 /* ListContactController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9202907B24224DE60029A209 /* ListContactController.xib */; };
+		9202907E242255C20029A209 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9202907D242255C20029A209 /* GoogleService-Info.plist */; };
+		9233B9952420C327009E3A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9942420C327009E3A46 /* AppDelegate.swift */; };
+		9233B9972420C327009E3A46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9962420C327009E3A46 /* SceneDelegate.swift */; };
+		9233B9992420C327009E3A46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9982420C327009E3A46 /* LoginViewController.swift */; };
+		9233B99C2420C327009E3A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9233B99A2420C327009E3A46 /* Main.storyboard */; };
+		9233B99E2420C32A009E3A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9233B99D2420C32A009E3A46 /* Assets.xcassets */; };
+		9233B9A12420C32A009E3A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9233B99F2420C32A009E3A46 /* LaunchScreen.storyboard */; };
+		9233B9AA2420C3D2009E3A46 /* user_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 9233B9A92420C3D2009E3A46 /* user_list.json */; };
+		9233B9B12420ED90009E3A46 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9B02420ED90009E3A46 /* User.swift */; };
+		9233B9B32420EDC1009E3A46 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9B22420EDC1009E3A46 /* LoginViewModel.swift */; };
+		9233B9B92420EE24009E3A46 /* UserListJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9B82420EE24009E3A46 /* UserListJSONParser.swift */; };
+		9233B9BB2420EE31009E3A46 /* UserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9BA2420EE31009E3A46 /* UserJSONParser.swift */; };
+		9233B9BD2420EE62009E3A46 /* APIInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9BC2420EE62009E3A46 /* APIInterface.swift */; };
+		9233B9C12420EEC4009E3A46 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9C02420EEC4009E3A46 /* UIView+Extensions.swift */; };
+		9233B9C32420EECF009E3A46 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9C22420EECF009E3A46 /* String+Extensions.swift */; };
+		9233B9C52420EEDC009E3A46 /* NSError+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9C42420EEDC009E3A46 /* NSError+Extensions.swift */; };
+		9233B9C72420EF08009E3A46 /* FlowControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9C62420EF08009E3A46 /* FlowControllers.swift */; };
+		9233B9CA2420EFBE009E3A46 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9C82420EFBE009E3A46 /* ChatController.swift */; };
+		9233B9CE2420F80C009E3A46 /* ListContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9CC2420F80C009E3A46 /* ListContactController.swift */; };
+		9233B9D32421137F009E3A46 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9D12421137F009E3A46 /* ContactCell.swift */; };
+		9233B9D42421137F009E3A46 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9233B9D22421137F009E3A46 /* ContactCell.xib */; };
+		9233B9D6242114DB009E3A46 /* ListContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9D5242114DB009E3A46 /* ListContactViewModel.swift */; };
+		9233B9D924211D58009E3A46 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9233B9D724211D58009E3A46 /* MessageCell.swift */; };
+		9233B9DA24211D58009E3A46 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9233B9D824211D58009E3A46 /* MessageCell.xib */; };
+		DDFE8C68CAB9F444BD19B734 /* Pods_kiwari_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170312991EA26ECC34F633F4 /* Pods_kiwari_ios_test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		170312991EA26ECC34F633F4 /* Pods_kiwari_ios_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiwari_ios_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AF2835772784EC0ACCFA6D7 /* Pods-kiwari-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
+		3F95F0C925D226A6BFB55494 /* Pods-kiwari-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.release.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.release.xcconfig"; sourceTree = "<group>"; };
+		9202907724223DB70029A209 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		9202907924224DDF0029A209 /* ChatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatController.xib; sourceTree = "<group>"; };
+		9202907B24224DE60029A209 /* ListContactController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListContactController.xib; sourceTree = "<group>"; };
+		9202907D242255C20029A209 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9233B9912420C327009E3A46 /* kiwari-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kiwari-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9233B9942420C327009E3A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9233B9962420C327009E3A46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9233B9982420C327009E3A46 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9233B99B2420C327009E3A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9233B99D2420C32A009E3A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9233B9A02420C32A009E3A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9233B9A22420C32A009E3A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9233B9A92420C3D2009E3A46 /* user_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = user_list.json; sourceTree = "<group>"; };
+		9233B9B02420ED90009E3A46 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9233B9B22420EDC1009E3A46 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9233B9B82420EE24009E3A46 /* UserListJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListJSONParser.swift; sourceTree = "<group>"; };
+		9233B9BA2420EE31009E3A46 /* UserJSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONParser.swift; sourceTree = "<group>"; };
+		9233B9BC2420EE62009E3A46 /* APIInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInterface.swift; sourceTree = "<group>"; };
+		9233B9C02420EEC4009E3A46 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9233B9C22420EECF009E3A46 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		9233B9C42420EEDC009E3A46 /* NSError+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Extensions.swift"; sourceTree = "<group>"; };
+		9233B9C62420EF08009E3A46 /* FlowControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowControllers.swift; sourceTree = "<group>"; };
+		9233B9C82420EFBE009E3A46 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		9233B9CC2420F80C009E3A46 /* ListContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactController.swift; sourceTree = "<group>"; };
+		9233B9D12421137F009E3A46 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		9233B9D22421137F009E3A46 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		9233B9D5242114DB009E3A46 /* ListContactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContactViewModel.swift; sourceTree = "<group>"; };
+		9233B9D724211D58009E3A46 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		9233B9D824211D58009E3A46 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9233B98E2420C327009E3A46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDFE8C68CAB9F444BD19B734 /* Pods_kiwari_ios_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9233B9882420C327009E3A46 = {
+			isa = PBXGroup;
+			children = (
+				9233B9932420C327009E3A46 /* kiwari-ios-test */,
+				9233B9922420C327009E3A46 /* Products */,
+				C0EA775AD5EEE6DFB9292575 /* Pods */,
+				E840948AF30FFD43958DC2A2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9233B9922420C327009E3A46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9912420C327009E3A46 /* kiwari-ios-test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9233B9932420C327009E3A46 /* kiwari-ios-test */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9B42420EDC4009E3A46 /* API */,
+				9233B9D024211362009E3A46 /* Cells */,
+				9233B9AB2420CF43009E3A46 /* Controllers */,
+				9233B9BF2420EEA5009E3A46 /* Extensions */,
+				9233B9BE2420EE8F009E3A46 /* Helpers */,
+				9233B9A82420C3B4009E3A46 /* JSON */,
+				9233B9AD2420DE39009E3A46 /* Models */,
+				9233B9B52420EDE6009E3A46 /* Parsers */,
+				9233B9AC2420D23E009E3A46 /* ViewModels */,
+				9233B9942420C327009E3A46 /* AppDelegate.swift */,
+				9233B9962420C327009E3A46 /* SceneDelegate.swift */,
+				9233B99A2420C327009E3A46 /* Main.storyboard */,
+				9233B99D2420C32A009E3A46 /* Assets.xcassets */,
+				9233B99F2420C32A009E3A46 /* LaunchScreen.storyboard */,
+				9233B9A22420C32A009E3A46 /* Info.plist */,
+				9202907D242255C20029A209 /* GoogleService-Info.plist */,
+			);
+			path = "kiwari-ios-test";
+			sourceTree = "<group>";
+		};
+		9233B9A82420C3B4009E3A46 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9A92420C3D2009E3A46 /* user_list.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		9233B9AB2420CF43009E3A46 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9982420C327009E3A46 /* LoginViewController.swift */,
+				9233B9C82420EFBE009E3A46 /* ChatController.swift */,
+				9202907924224DDF0029A209 /* ChatController.xib */,
+				9233B9CC2420F80C009E3A46 /* ListContactController.swift */,
+				9202907B24224DE60029A209 /* ListContactController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9233B9AC2420D23E009E3A46 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9B22420EDC1009E3A46 /* LoginViewModel.swift */,
+				9233B9D5242114DB009E3A46 /* ListContactViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9233B9AD2420DE39009E3A46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9B02420ED90009E3A46 /* User.swift */,
+				9202907724223DB70029A209 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9233B9B42420EDC4009E3A46 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9BC2420EE62009E3A46 /* APIInterface.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9233B9B52420EDE6009E3A46 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9B82420EE24009E3A46 /* UserListJSONParser.swift */,
+				9233B9BA2420EE31009E3A46 /* UserJSONParser.swift */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		9233B9BE2420EE8F009E3A46 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9C62420EF08009E3A46 /* FlowControllers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9233B9BF2420EEA5009E3A46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9C02420EEC4009E3A46 /* UIView+Extensions.swift */,
+				9233B9C22420EECF009E3A46 /* String+Extensions.swift */,
+				9233B9C42420EEDC009E3A46 /* NSError+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9233B9D024211362009E3A46 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9233B9D12421137F009E3A46 /* ContactCell.swift */,
+				9233B9D22421137F009E3A46 /* ContactCell.xib */,
+				9233B9D724211D58009E3A46 /* MessageCell.swift */,
+				9233B9D824211D58009E3A46 /* MessageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C0EA775AD5EEE6DFB9292575 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AF2835772784EC0ACCFA6D7 /* Pods-kiwari-ios-test.debug.xcconfig */,
+				3F95F0C925D226A6BFB55494 /* Pods-kiwari-ios-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E840948AF30FFD43958DC2A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				170312991EA26ECC34F633F4 /* Pods_kiwari_ios_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9233B9902420C327009E3A46 /* kiwari-ios-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9233B9A52420C32A009E3A46 /* Build configuration list for PBXNativeTarget "kiwari-ios-test" */;
+			buildPhases = (
+				208EEE354D01394D02731940 /* [CP] Check Pods Manifest.lock */,
+				9233B98D2420C327009E3A46 /* Sources */,
+				9233B98E2420C327009E3A46 /* Frameworks */,
+				9233B98F2420C327009E3A46 /* Resources */,
+				9C9D870412A72976DD797226 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kiwari-ios-test";
+			productName = "kiwari-ios-test";
+			productReference = 9233B9912420C327009E3A46 /* kiwari-ios-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9233B9892420C327009E3A46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = chataja;
+				TargetAttributes = {
+					9233B9902420C327009E3A46 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9233B98C2420C327009E3A46 /* Build configuration list for PBXProject "kiwari-ios-test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9233B9882420C327009E3A46;
+			productRefGroup = 9233B9922420C327009E3A46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9233B9902420C327009E3A46 /* kiwari-ios-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9233B98F2420C327009E3A46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9233B9AA2420C3D2009E3A46 /* user_list.json in Resources */,
+				9233B9A12420C32A009E3A46 /* LaunchScreen.storyboard in Resources */,
+				9202907E242255C20029A209 /* GoogleService-Info.plist in Resources */,
+				9233B99E2420C32A009E3A46 /* Assets.xcassets in Resources */,
+				9202907A24224DDF0029A209 /* ChatController.xib in Resources */,
+				9233B9DA24211D58009E3A46 /* MessageCell.xib in Resources */,
+				9233B99C2420C327009E3A46 /* Main.storyboard in Resources */,
+				9202907C24224DE60029A209 /* ListContactController.xib in Resources */,
+				9233B9D42421137F009E3A46 /* ContactCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		208EEE354D01394D02731940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiwari-ios-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C9D870412A72976DD797226 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9233B98D2420C327009E3A46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9233B9D32421137F009E3A46 /* ContactCell.swift in Sources */,
+				9233B9C32420EECF009E3A46 /* String+Extensions.swift in Sources */,
+				9233B9BD2420EE62009E3A46 /* APIInterface.swift in Sources */,
+				9202907824223DB70029A209 /* Message.swift in Sources */,
+				9233B9BB2420EE31009E3A46 /* UserJSONParser.swift in Sources */,
+				9233B9B12420ED90009E3A46 /* User.swift in Sources */,
+				9233B9C12420EEC4009E3A46 /* UIView+Extensions.swift in Sources */,
+				9233B9B92420EE24009E3A46 /* UserListJSONParser.swift in Sources */,
+				9233B9CE2420F80C009E3A46 /* ListContactController.swift in Sources */,
+				9233B9992420C327009E3A46 /* LoginViewController.swift in Sources */,
+				9233B9D6242114DB009E3A46 /* ListContactViewModel.swift in Sources */,
+				9233B9CA2420EFBE009E3A46 /* ChatController.swift in Sources */,
+				9233B9952420C327009E3A46 /* AppDelegate.swift in Sources */,
+				9233B9B32420EDC1009E3A46 /* LoginViewModel.swift in Sources */,
+				9233B9D924211D58009E3A46 /* MessageCell.swift in Sources */,
+				9233B9972420C327009E3A46 /* SceneDelegate.swift in Sources */,
+				9233B9C52420EEDC009E3A46 /* NSError+Extensions.swift in Sources */,
+				9233B9C72420EF08009E3A46 /* FlowControllers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9233B99A2420C327009E3A46 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9233B99B2420C327009E3A46 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9233B99F2420C32A009E3A46 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9233B9A02420C32A009E3A46 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9233B9A32420C32A009E3A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9233B9A42420C32A009E3A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9233B9A62420C32A009E3A46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF2835772784EC0ACCFA6D7 /* Pods-kiwari-ios-test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "chataja.kiwari-ios-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9233B9A72420C32A009E3A46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F95F0C925D226A6BFB55494 /* Pods-kiwari-ios-test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "chataja.kiwari-ios-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9233B98C2420C327009E3A46 /* Build configuration list for PBXProject "kiwari-ios-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9233B9A32420C32A009E3A46 /* Debug */,
+				9233B9A42420C32A009E3A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9233B9A52420C32A009E3A46 /* Build configuration list for PBXNativeTarget "kiwari-ios-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9233B9A62420C32A009E3A46 /* Debug */,
+				9233B9A72420C32A009E3A46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9233B9892420C327009E3A46 /* Project object */;
+}
