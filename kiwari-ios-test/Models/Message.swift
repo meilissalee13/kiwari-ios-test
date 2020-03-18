@@ -9,11 +9,13 @@
 import UIKit
 
 struct Message {
+    var id: Int
     var user : User!
     var date: String = ""
     var message: String = ""
     
-    init(user: User, date: String, message: String) {
+    init(id: Int, user: User, date: String, message: String) {
+        self.id = id
         self.user = user
         self.date = date
         self.message = message

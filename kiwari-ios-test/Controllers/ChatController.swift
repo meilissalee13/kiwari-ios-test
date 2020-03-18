@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class ChatController: UIViewController {
 
@@ -18,9 +21,11 @@ class ChatController: UIViewController {
     
     var user: User!
     var messages: [Message] = []
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.settingFireStore()
         self.setupTable()
         self.inputTxt.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(ChatController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -32,9 +37,20 @@ class ChatController: UIViewController {
         self.setupUI()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getRoomMessages()
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
+    }
+    
+    func settingFireStore() {
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
     }
     
     func setupTable() {
@@ -65,10 +81,8 @@ class ChatController: UIViewController {
         formatter.dateStyle = .long
         let currentDate = formatter.string(from: Date())
         
-        let newMessage = Message(user: self.currentUser(), date: currentDate, message: self.inputTxt.text!)
-        self.messages.append(newMessage)
-        self.tableView.insertRows(at: [IndexPath(item: self.messages.count-1, section: 0)], with: .automatic)
-        self.loadLastMessages()
+        let newMessage = Message(id: -1, user: self.currentUser(), date: currentDate, message: self.inputTxt.text!)
+        self.addNewMessage(newMessage)
         self.inputTxt.text = ""
     }
     
@@ -82,6 +96,49 @@ class ChatController: UIViewController {
     func currentUser() -> User {
         guard let data = UserDefaults.standard.data(forKey: "currentuser") else { return User() }
         return try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as! User
+    }
+    
+    func addNewMessage(_ msg: Message) {
+        var ref: DocumentReference? = nil
+        ref = db.collection("messages").addDocument(data: [
+            "id": self.messages.count,
+            "rooms": ["\(self.user.email)+\(self.currentUser().email)", "\(self.currentUser().email)+\(self.user.email)"],
+            "date": msg.date,
+            "msg": msg.message,
+            "sender_email": msg.user.email,
+            "sender_name": msg.user.name,
+            "sender_avatar": msg.user.avatar
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+    }
+    
+    func getRoomMessages() {
+        db.collection("messages")
+            .whereField("rooms", arrayContainsAny: ["\(self.user.email)+\(self.currentUser().email)", "\(self.currentUser().email)+\(self.user.email)"])
+            .addSnapshotListener { querySnapshot, error in
+                guard let snapshot = querySnapshot else {
+                    print("Error retreiving snapshots \(error!)")
+                    return
+                }
+                let msgs = snapshot.documents.sorted(by: { $1["id"] as! Int > $0["id"] as! Int }).map { $0.data() }
+                if msgs.count > 0 {
+                    for msg in msgs {
+                        let newMsg = Message(id: msg["id"] as! Int, user: User(email: msg["sender_email"] as! String, name: msg["sender_name"] as! String, avatar: msg["sender_avatar"] as! String), date: msg["date"] as! String, message: msg["msg"] as! String)
+                        if !self.messages.contains(where: { (msg_) -> Bool in
+                            msg_.id == newMsg.id
+                        }) {
+                            self.messages.append(newMsg)
+                        }
+                    }
+                    self.tableView.reloadData()
+                    self.loadLastMessages()
+                }
+            }
     }
 }
 
